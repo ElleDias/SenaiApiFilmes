@@ -18,7 +18,7 @@ Atualmente, o projeto está no **início** e em fase de desenvolvimento. A API e
 ### 🚀 **Tecnologias Usadas:**
 A API está sendo desenvolvida utilizando as seguintes tecnologias:
 
-- <img src="https://github.com/user-attachments/assets/b264dfca-b4e0-4d96-aefb-49140785523f" width="100px" height="50px">
+- <img src="https://media.licdn.com/dms/image/v2/D4D12AQFMwrAzidDVDQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1718596085685?e=2147483647&v=beta&t=pLTVzKwtvy6TCrty2vjLUB80dtKcIlsP_-eUfQukYmc" width="100px" height="50px">
 - <img src="https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white" alt="Visual Studio" height="30px">
 - <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" height="30px">
 - <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="Csharp" height="30px">
