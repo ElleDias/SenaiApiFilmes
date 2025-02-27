@@ -334,3 +334,4 @@ C:\Users\56184436864\Desktop\SenaiApiFilmes\obj\Debug\net8.0\refint\api_filmes_s
 C:\Users\56184436864\Desktop\SenaiApiFilmes\obj\Debug\net8.0\api_filmes_senai.pdb
 C:\Users\56184436864\Desktop\SenaiApiFilmes\obj\Debug\net8.0\api_filmes_senai.genruntimeconfig.cache
 C:\Users\56184436864\Desktop\SenaiApiFilmes\obj\Debug\net8.0\ref\api_filmes_senai.dll
+C:\Users\56184436864\Desktop\SenaiApiFilmes\bin\Debug\net8.0\BCrypt.Net-Next.dll

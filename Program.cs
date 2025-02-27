@@ -12,7 +12,7 @@ builder.Services.AddDbContext<Filme_Context>(options =>
 
 builder.Services.AddScoped<IGeneroRepository, GeneroRepository>();
 builder.Services.AddScoped<IFilmeRepository, FilmeRepository>();
-
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
 
 builder.Services.AddControllers();

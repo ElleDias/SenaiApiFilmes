@@ -4,6 +4,7 @@ using API_Filmes_SENAI.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace api_filmes_senai.Migrations
 {
     [DbContext(typeof(Filme_Context))]
-    partial class Filme_ContextModelSnapshot : ModelSnapshot
+    [Migration("20250227171108_Db_Filmes_v2")]
+    partial class Db_Filmes_v2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
