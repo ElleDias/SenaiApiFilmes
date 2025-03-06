@@ -28,7 +28,7 @@ namespace api_filmes_senai.Migrations
                 columns: table => new
                 {
                     IdFilme = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Titolo = table.Column<string>(type: "VARCHAR(50)", nullable: false),
+                    Titulo = table.Column<string>(type: "VARCHAR(50)", nullable: false),
                     IdGenero = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>

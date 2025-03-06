@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.IdentityModel.Tokens;
 
 #nullable disable
 
@@ -40,3 +41,4 @@ namespace api_filmes_senai.Migrations
         }
     }
 }
+

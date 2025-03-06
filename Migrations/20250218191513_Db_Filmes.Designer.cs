@@ -34,7 +34,7 @@ namespace api_filmes_senai.Migrations
                     b.Property<Guid>("IdGenero")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Titolo")
+                    b.Property<string>("Titulo")
                         .IsRequired()
                         .HasColumnType("VARCHAR(50)");
 
