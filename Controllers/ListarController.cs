@@ -17,6 +17,12 @@ namespace api_filmes_senai.Controllers
         }
 
         // Método para listar os gêneros de filmes
+        /// <summary>
+        /// Endpoint para Listar 
+        /// </summary>
+        /// <param name="id">id do genero buscado</param>
+        /// <returns>Genero Buscado</returns>
+        /// 
         [HttpGet]
         public IActionResult Get()
         {

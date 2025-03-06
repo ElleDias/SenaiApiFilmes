@@ -18,6 +18,12 @@ namespace api_filmes_senai.Controllers
         {
             _generoRepository = generoRepository; }
 
+        /// <summary>
+        /// Endpoint para Listar um Genero 
+        /// </summary>
+        /// <param name="id">id do genero buscado</param>
+        /// <returns>Genero Buscado</returns>
+        /// 
         [HttpGet]
         public IActionResult Get()
         {
@@ -32,7 +38,13 @@ namespace api_filmes_senai.Controllers
 
         }
 
-        [Authorize]        
+            /// <summary>
+        /// Endpoint para Criar um Genero de Filme 
+        /// </summary>
+        /// <param name="id">id do genero buscado</param>
+        /// <returns>Genero Buscado</returns>
+        /// 
+        [Authorize]  
         [HttpPost]
         public IActionResult Post(Genero novoGenero)
         {
@@ -46,6 +58,11 @@ namespace api_filmes_senai.Controllers
                 return BadRequest(error.Message);}
 
         }
+        /// <summary>
+        /// Endpoint para buscar um genero pelo seu id
+        /// </summary>
+        /// <param name="id">id do genero buscado</param>
+        /// <returns>Genero Buscado</returns>
 
         [HttpGet("BuscarPorId/{id}")]
         public IActionResult GetById(Guid id){
@@ -61,8 +78,13 @@ namespace api_filmes_senai.Controllers
                 return BadRequest(error.Message);
             }
 }
-        
-[HttpDelete ("{id}")]
+        /// <summary>
+        /// Endpoint para Deletar um usuario 
+        /// </summary>
+        /// <param name="id">id do genero buscado</param>
+        /// <returns>Genero Buscado</returns>
+        /// 
+        [HttpDelete ("{id}")]
             public IActionResult Delete(Guid id)
             {
                    try
@@ -78,7 +100,12 @@ namespace api_filmes_senai.Controllers
                 }
 
         }
-
+        /// <summary>
+        /// Endpoint para Atualizar um Genero 
+        /// </summary>
+        /// <param name="id">id do genero buscado</param>
+        /// <returns>Genero Buscado</returns>
+        /// 
         [HttpPut ("id")]
         public IActionResult Put(Guid id, Genero genero)
         {

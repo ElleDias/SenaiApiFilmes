@@ -15,7 +15,13 @@ namespace api_filmes_senai.Controllers
         public FilmeController(IFilmeRepository filmeRepository)
         {
             _filmeRepository = filmeRepository;
-        }
+        } 
+        /// <summary>
+           /// Endpoint para Listar um Filme 
+           /// </summary>
+           /// <param name="id">id do genero buscado</param>
+           /// <returns>Genero Buscado</returns>
+           /// 
         [HttpGet]
 
         public IActionResult Get()
@@ -31,8 +37,13 @@ namespace api_filmes_senai.Controllers
                 return BadRequest(error.Message);
             }
              }
-
-            [HttpPost]
+        /// <summary>
+        /// Endpoint para Criar um filme 
+        /// </summary>
+        /// <param name="id">id do genero buscado</param>
+        /// <returns>Genero Buscado</returns>
+        /// 
+        [HttpPost]
 
             public IActionResult Post(Filme novoFilme)
             {
@@ -48,8 +59,13 @@ namespace api_filmes_senai.Controllers
                 }
 
             }
-
-            [HttpGet("BuscarPorId/{id}")]
+        /// <summary>
+        /// Endpoint para buscar um Filme pelo seu id
+        /// </summary>
+        /// <param name="id">id do genero buscado</param>
+        /// <returns>Genero Buscado</returns>
+        /// 
+        [HttpGet("BuscarPorId/{id}")]
             public IActionResult GetById(Guid id)
             {
 
@@ -64,8 +80,13 @@ namespace api_filmes_senai.Controllers
                     return BadRequest(error.Message);
                 }
             }
-
-            [HttpDelete("{id}")]
+        /// <summary>
+        /// Endpoint para Deletar um Filme 
+        /// </summary>
+        /// <param name="id">id do genero buscado</param>
+        /// <returns>Genero Buscado</returns>
+        /// 
+        [HttpDelete("{id}")]
             public IActionResult Delete(Guid id)
             {
                 try
@@ -81,8 +102,13 @@ namespace api_filmes_senai.Controllers
                 }
 
             }
-
-            [HttpPut("id")]
+        /// <summary>
+        /// Endpoint para Atualizar um Filme 
+        /// </summary>
+        /// <param name="id">id do genero buscado</param>
+        /// <returns>Genero Buscado</returns>
+        /// 
+        [HttpPut("id")]
             public IActionResult Put(Guid id, Filme filme)
             {
                 try
