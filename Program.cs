@@ -24,7 +24,7 @@ builder.Services.AddAuthentication(options =>
     options.DefaultAuthenticateScheme = "JwtBearer";
 })
 
-.AddJwtBearer("JwkBearer", options =>
+.AddJwtBearer("JwtBearer", options =>
   {
       options.TokenValidationParameters = new TokenValidationParameters
       {
@@ -53,7 +53,9 @@ var app = builder.Build();
 app.MapControllers();
 
 app.UseAuthentication();
+
 app.UseAuthorization();
+
 
 app.Run();
 

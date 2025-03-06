@@ -19,16 +19,19 @@ namespace api_filmes_senai.Controllers
         {
             _usuarioRepository = usuarioRepository;
         }
+
         [HttpPost]
-        public IActionResult Login (LoginDTO loginDTO)
+        public IActionResult Login(LoginDTO loginDTO)
         {
             try
             {
-Usuario usuarioBuscado = _usuarioRepository.BuscarPorEmailESenha(loginDTO.Email,  loginDTO.Senha);
+                Usuario usuarioBuscado = _usuarioRepository.BuscarPorEmailESenha(loginDTO.Email!, loginDTO.Senha!);
+
                 if (usuarioBuscado == null)
                 {
                     return NotFound("Usuario n'ao encontrado, email ou senha invalidos!");
                 }
+
                 //caso o usuario seja encontrado, prossegue para a criacao do token
                 //1 passo- definir as claims() que serao fornecidos no token
                 //claim seria informacoes
@@ -36,9 +39,10 @@ Usuario usuarioBuscado = _usuarioRepository.BuscarPorEmailESenha(loginDTO.Email,
                 {
                        new Claim(JwtRegisteredClaimNames.Jti, usuarioBuscado.IdUsuario.ToString()),
                        new Claim (JwtRegisteredClaimNames.Email,usuarioBuscado.Email!),
-                        new Claim (JwtRegisteredClaimNames.Name, usuarioBuscado.Nome),
-                new Claim ("Nome da Claim" ,"Valor da claim")
-                   };
+                       new Claim (JwtRegisteredClaimNames.Name, usuarioBuscado.Nome!),
+                       new Claim ("Nome da Claim" ,"Valor da claim")
+                };
+
                 //2* passo - Definir a chave de acesso do token
                 var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("filme-chaver-autenticacao-webapi-dev"));
 
