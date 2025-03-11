@@ -14,6 +14,7 @@
             Endpoint para Listar um Filme 
             </summary>
             <param name="id">id do genero buscado</param>
+            /// <param name="filme">Filme do genero buscado</param>
             <returns>Genero Buscado</returns>
             
         </member>

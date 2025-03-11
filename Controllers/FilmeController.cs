@@ -1,6 +1,7 @@
 ﻿using api_filmes_senai.Domains;
 using api_filmes_senai.Interfaces;
 using api_filmes_senai.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,13 +16,14 @@ namespace api_filmes_senai.Controllers
         public FilmeController(IFilmeRepository filmeRepository)
         {
             _filmeRepository = filmeRepository;
-        } 
+        }
         /// <summary>
-           /// Endpoint para Listar um Filme 
-           /// </summary>
-           /// <param name="id">id do genero buscado</param>
-           /// <returns>Genero Buscado</returns>
-           /// 
+        /// Endpoint para Listar um Filme 
+        /// </summary>
+        /// <param name="id">id do genero buscado</param>
+        /// /// <param name="filme">Filme do genero buscado</param>
+        /// <returns>Genero Buscado</returns>
+        /// 
         [HttpGet]
 
         public IActionResult Get()
@@ -43,6 +45,8 @@ namespace api_filmes_senai.Controllers
         /// <param name="id">id do genero buscado</param>
         /// <returns>Genero Buscado</returns>
         /// 
+
+        [Authorize]
         [HttpPost]
 
             public IActionResult Post(Filme novoFilme)
@@ -86,6 +90,7 @@ namespace api_filmes_senai.Controllers
         /// <param name="id">id do genero buscado</param>
         /// <returns>Genero Buscado</returns>
         /// 
+        [Authorize]
         [HttpDelete("{id}")]
             public IActionResult Delete(Guid id)
             {
@@ -108,6 +113,7 @@ namespace api_filmes_senai.Controllers
         /// <param name="id">id do genero buscado</param>
         /// <returns>Genero Buscado</returns>
         /// 
+        [Authorize]
         [HttpPut("id")]
             public IActionResult Put(Guid id, Filme filme)
             {

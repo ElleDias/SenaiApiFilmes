@@ -84,6 +84,7 @@ namespace api_filmes_senai.Controllers
         /// <param name="id">id do genero buscado</param>
         /// <returns>Genero Buscado</returns>
         /// 
+        [Authorize]
         [HttpDelete ("{id}")]
             public IActionResult Delete(Guid id)
             {
